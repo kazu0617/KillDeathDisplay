@@ -1,0 +1,27 @@
+main: net.kazu0617.killdeathdisplay.Main
+name: KillDeathDisplay
+author: kazu0617
+version: 1.0
+
+commands:
+  KillDeathDisplay:
+    description: use KillDeathDisplay command
+    aliases: [kd,kdd]
+
+permissions:
+  KillDeathDisplay.view:
+    description: Allow to view player KillDeath
+    default: true
+  KillDeathDisplay.reset:
+    desctiption: Allow to reset player KillDeath
+    default: false
+  KillDeathDisplay.top3:
+    desctiption: Allow to view KillDeath top3
+    default: true
+  KillDeathDisplay.admin:
+    desctiption: Allow to use all command
+    children:
+        KillDeathDisplay.view: true
+        KillDeathDisplay.reset: true
+        KillDeathDisplay.top3: true
+    default: op
